@@ -14,8 +14,8 @@ MTPluginInfo ExtPluginInfo= {
 	101,
 	MTServerAPIVersion,
 	L"CleanPluginProject",
-	L"© 2001-2019, MetaQuotes Software Corp.",
-	L"MQ Serv API 2190"
+	L"© 2024, ForexRust.",
+	L"MT5 Server Plugin Empty Template."
 };
 //+------------------------------------------------------------------+
 //| Plugin description structure                                     |

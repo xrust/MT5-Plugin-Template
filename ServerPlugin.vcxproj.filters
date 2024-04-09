@@ -24,10 +24,10 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Tools-MT45\LogFile.cpp">
+    <ClCompile Include="..\Tools\LogFile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Tools-MT45\Logos.cpp">
+    <ClCompile Include="..\Tools\Logos.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -41,16 +41,16 @@
     <ClInclude Include="stdafx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\Tools-MT45\LogFile.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Tools-MT45\Logos.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="XLog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="resource1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Tools\LogFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Tools\Logos.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

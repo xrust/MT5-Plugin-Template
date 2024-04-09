@@ -16,6 +16,6 @@
 //---
 #include <windows.h>
 #include <limits.h>
-#include "MetaTrader5SDK/Include/MT5APIServer.h"
-#include "MetaTrader5SDK/Include/MT5APITools.h"
+#include <MT5APIServer.h>
+#include <MT5APITools.h>
 //+------------------------------------------------------------------+

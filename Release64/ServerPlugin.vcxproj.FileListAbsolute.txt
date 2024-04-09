@@ -1,0 +1,1 @@
+D:\MetaTrader5API\MT5-Plugin-Template\Release64\CleanPlugin64.dll

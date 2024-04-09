@@ -133,7 +133,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>..\MetaTrader5SDK;..\Tools;$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\MetaTrader5SDK\Include\;..\Tools\;$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions> /Oy- %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
@@ -195,7 +195,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat />
-      <AdditionalIncludeDirectories>..\MetaTrader5SDK;..\Tools;$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\MetaTrader5SDK\Include\;..\Tools\;$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions> /Oy- %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
@@ -214,8 +214,8 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\Tools-MT45\LogFile.cpp" />
-    <ClCompile Include="..\Tools-MT45\Logos.cpp" />
+    <ClCompile Include="..\Tools\LogFile.cpp" />
+    <ClCompile Include="..\Tools\Logos.cpp" />
     <ClCompile Include="PluginInstance.cpp" />
     <ClCompile Include="ServerPlugin.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -226,8 +226,8 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Tools-MT45\LogFile.h" />
-    <ClInclude Include="..\Tools-MT45\Logos.h" />
+    <ClInclude Include="..\Tools\LogFile.h" />
+    <ClInclude Include="..\Tools\Logos.h" />
     <ClInclude Include="PluginInstance.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="resource1.h" />

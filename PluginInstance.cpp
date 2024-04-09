@@ -70,7 +70,7 @@ MTAPIRES CPluginInstance::Start(IMTServerAPI* api) {
 	//--- создаем и инициализируем лог
 	//CStrW fname = GetModuleName( g_hmodule );
 	//LogCreate( oklog, g_hmodule, L"YMD", L"Ok.log", fname );
-	log.Open();
+	
 	//---
 	return(MT_RET_OK);
 }

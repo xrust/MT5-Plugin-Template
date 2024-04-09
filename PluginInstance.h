@@ -11,12 +11,11 @@ using namespace std;
 #include <vector>
 #include <string>
 //---
-#include "Tools-MT45/StrA.h"
-#include "Tools-MT45/StrW.h"
-#include "Tools-MT45/IniFile.h"
-#include "Tools-MT45/LogFile.h"
-#include "Tools-MT45/TimeHelper.h"
-#include <ULogFile.h>
+#include <StrA.h>
+#include <StrW.h>
+#include <IniFile.h>
+#include <LogFile.h>
+#include <TimeHelper.h>
 //---
 extern HMODULE g_hmodule;
 extern CLogFile g_log;
@@ -33,7 +32,6 @@ private:
 	IMTServerAPI*		m_api;
 	IMTConPlugin*		m_config;
 	//---
-	CULogFile log;
 public:
 	CPluginInstance(void);
 	virtual          ~CPluginInstance(void);
