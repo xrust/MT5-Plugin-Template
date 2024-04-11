@@ -6,12 +6,12 @@
 #include "stdafx.h"
 #include "PluginInstance.h"
 //---
-
+#define FILE_VERSION 1011
 //+------------------------------------------------------------------+
 //| Plugin description structure                                     |
 //+------------------------------------------------------------------+
 MTPluginInfo ExtPluginInfo= {
-	101,
+	FILE_VERSION,
 	MTServerAPIVersion,
 	L"CleanPluginProject",
 	L"© 2024, ForexRust.",
@@ -53,16 +53,20 @@ MTAPIENTRY MTAPIRES MTServerAbout(MTPluginInfo& info) {
 //| Plugin instance creation entry point                             |
 //+------------------------------------------------------------------+
 MTAPIENTRY MTAPIRES MTServerCreate( UINT apiversion, IMTServerPlugin **plugin ) {
-	//--- check parameters
-	if (!plugin) return(MT_RET_ERR_PARAMS);
-	//--- create plugin instance
-	if (((*plugin) = new(std::nothrow) CPluginInstance()) == NULL) return(MT_RET_ERR_MEM);
 	//--- создаем и инициализируем главный лог
-	CStrW fname = GetModuleName( g_hmodule );
-	LogCreate( g_log, g_hmodule, L"YMD", L"log.log", fname );
-	galog.Init( &g_log, fname );
+	MTLogCreate( g_log, g_hmodule, "YMD", ".log", "", FILE_VERSION );
 	CLogAppenderFunc _lf( galog, __FUNCTION__, true, false );
-	//---
-	return(MT_RET_OK);
+	///--- check parameters
+	if( !plugin ){
+		_lf.MsgA( LL_ERR, "plugin is Null, apiversion=%d", ( int )apiversion );
+		return( MT_RET_ERR_PARAMS );
+	}
+	//--- create plugin instance
+	if( ( ( *plugin ) = new( std::nothrow ) CPluginInstance() ) == NULL ){
+		_lf.MsgA( LL_ERR, "create plugin object, apiversion=%d", ( int )apiversion );
+		return( MT_RET_ERR_MEM );
+	}
+	//--- ok
+	return( MT_RET_OK );
 }
 //+------------------------------------------------------------------+
